@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { RecoilRoot } from 'recoil'
 import React, { StrictMode } from 'react'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -9,9 +10,11 @@ const container = document.getElementById('root')
 const root = createRoot(container as HTMLElement)
 const app = (
     <StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <RecoilRoot>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </RecoilRoot>
     </StrictMode>
 )
 
