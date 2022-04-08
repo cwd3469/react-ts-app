@@ -1,21 +1,19 @@
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+
 import { RecoilRoot } from 'recoil'
 import React, { StrictMode } from 'react'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-import './index.css'
+import reportWebVitals from './containers/reportWebVitals'
+import App from './containers/App'
+import './assets/css/index.css'
 
 const container = document.getElementById('root')
 const root = createRoot(container as HTMLElement)
 const app = (
-    <StrictMode>
-        <RecoilRoot>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </RecoilRoot>
-    </StrictMode>
+  <StrictMode>
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
+  </StrictMode>
 )
 
 root.render(app)
