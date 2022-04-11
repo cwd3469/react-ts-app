@@ -1,13 +1,13 @@
 import React from 'react'
-import MainBody from 'components/Main/MainBody'
+
 import DashboardContent from 'components/Layout/DashboadLayout'
 
-function Main(): JSX.Element {
+function Mypage(): JSX.Element {
   return (
     <DashboardContent>
-      <MainBody />
+      <div>Mypage</div>
     </DashboardContent>
   )
 }
 
-export default Main
+export default Mypage

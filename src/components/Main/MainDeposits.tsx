@@ -2,10 +2,16 @@
 import * as React from 'react'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
+import request from 'utils/mock'
 import Title from './Title'
 
 function preventDefault(event: React.MouseEvent): void {
   event.preventDefault()
+}
+
+async function tsetasiox(): Promise<void> {
+  const res = await request.get('/login')
+  console.log(res)
 }
 
 export default function Deposits(): JSX.Element {
@@ -21,6 +27,9 @@ export default function Deposits(): JSX.Element {
       <div>
         <Link color="primary" href="#" onClick={preventDefault}>
           View balance
+        </Link>
+        <Link color="primary" href="#" onClick={tsetasiox}>
+          axios test
         </Link>
       </div>
     </>

@@ -19,3 +19,7 @@ export type OrdersCreateData = {
   paymentMethod: string
   amount: number
 }
+
+export type DaschboldLayoutprops = {
+  children: JSX.Element
+}
