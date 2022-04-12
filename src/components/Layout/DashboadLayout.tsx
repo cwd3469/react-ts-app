@@ -8,6 +8,7 @@ import Toolbar from '@mui/material/Toolbar'
 import List from '@mui/material/List'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import Badge from '@mui/material/Badge'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -153,7 +154,9 @@ function DashboardContent(props: DaschboldLayoutprops): JSX.Element {
         >
           <Toolbar />
           {/* Container 가 메인 컨텐츠 */}
-          {children}
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            {children}
+          </Container>
         </Box>
       </Box>
     </ThemeProvider>

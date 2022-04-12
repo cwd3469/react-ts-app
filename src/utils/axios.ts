@@ -41,4 +41,12 @@ mock.onGet('/otp').reply(200, {
   token: 'tocken값입니다.',
 })
 
+mock.onGet('/order').reply(200, {
+  id: 1,
+  success: true,
+  userid: '유저아이디',
+  username: '관리자',
+  token: 'tocken값입니다.',
+})
+
 export default request
