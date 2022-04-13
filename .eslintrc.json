@@ -4,12 +4,14 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
         "airbnb",
-        "plugin:@typescript-eslint/recommended",
         "prettier",
         "prettier/prettier",
-        "plugin:prettier/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,7 +21,7 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "react-hooks"],
+    "plugins": ["react", "@typescript-eslint", "react-hooks","testing-library","jest-dom"],
     "rules": {
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
         "react/jsx-props-no-spreading": "off",
