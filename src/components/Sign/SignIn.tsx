@@ -14,27 +14,14 @@ import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { CopyrightProps } from 'typeings/Sign'
 
-function Copyright(props: CopyrightProps): JSX.Element {
-  const { sx }: CopyrightProps = props
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...sx}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
-  )
-}
-
 const theme = createTheme()
 
-export default function SignIn(): JSX.Element {
+function SignIn(): JSX.Element {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
     console.log({
-      email: data.get('email'),
+      userId: data.get('userId'),
       password: data.get('password'),
     })
   }
@@ -55,7 +42,7 @@ export default function SignIn(): JSX.Element {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            로그인
           </Typography>
           <Box
             component="form"
@@ -67,10 +54,11 @@ export default function SignIn(): JSX.Element {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="userId"
+              data-testid="userId"
+              name="userId"
+              autoComplete="current-userId"
+              label="아이디를 입력해주세요"
               autoFocus
             />
             <TextField
@@ -78,39 +66,37 @@ export default function SignIn(): JSX.Element {
               required
               fullWidth
               name="password"
-              label="Password"
+              data-testid="password"
+              label="비밀번호를 입력해주세요"
               type="password"
               id="password"
               autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="로그인 정보 기억하기"
             />
             <Button
+              name="signInButton"
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              로그인하기
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="/" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="/" variant="body2">
-                  Dont have an account? Sign Up
+                  비밀번호 찾기
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
   )
 }
+
+export default SignIn

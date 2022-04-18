@@ -5,10 +5,12 @@ import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import { PropsSx } from 'typeings/Main/index'
 import Link from '@mui/material/Link'
-import Chart from './MainChat'
-import Chart2 from './MainChat2'
+import MainChat from './MainChat'
+import MainChat2 from './MainChat2'
 import Deposits from './MainDeposits'
 import Orders from './MainOrders'
+
+// 카피라이트 제작
 
 function Copyright(props: PropsSx): JSX.Element {
   const { sx } = props
@@ -23,11 +25,12 @@ function Copyright(props: PropsSx): JSX.Element {
   )
 }
 
+// 메인페이지 컨텐츠
 function MainBody(): JSX.Element {
   return (
     <div>
       {/* Container 가 메인 컨텐츠 */}
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {/* Chart */}
         <Grid item xs={12} md={8} lg={9}>
           <Paper
@@ -38,7 +41,7 @@ function MainBody(): JSX.Element {
               height: 240,
             }}
           >
-            <Chart />
+            <MainChat />
           </Paper>
         </Grid>
         {/* Recent Deposits */}
@@ -54,10 +57,9 @@ function MainBody(): JSX.Element {
             <Deposits />
           </Paper>
         </Grid>
-
         <Grid item xs={12}>
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-            <Chart2 />
+            <MainChat2 />
           </Paper>
         </Grid>
         <Grid item xs={12}>

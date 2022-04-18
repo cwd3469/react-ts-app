@@ -11,6 +11,8 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs
 function OrderBtns(): JSX.Element {
   const downloadPdf = async (): Promise<any> => {
     const res = await request.get('/order')
+    console.log(res)
+
     const data = res.data.contents
     const form = OrderFromPdf(data)
     pdfMake.createPdf(form).download()

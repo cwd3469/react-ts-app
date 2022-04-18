@@ -3,7 +3,7 @@ import MockAdapter from 'axios-mock-adapter'
 import pdfContent from './mock'
 
 const request = axios.create({
-  baseURL: '/',
+  baseURL: 'localhost:5555/',
 })
 
 request.defaults.timeout = 3000

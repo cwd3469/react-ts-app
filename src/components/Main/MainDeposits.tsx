@@ -14,7 +14,7 @@ async function tsetasiox(): Promise<void> {
   console.log(res)
 }
 
-export default function Deposits(): JSX.Element {
+function Deposits(): JSX.Element {
   return (
     <>
       <Title>Recent Deposits</Title>
@@ -35,3 +35,4 @@ export default function Deposits(): JSX.Element {
     </>
   )
 }
+export default Deposits

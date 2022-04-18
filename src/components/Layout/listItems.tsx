@@ -15,30 +15,34 @@ export function MainListItems(): JSX.Element {
 
   return (
     <>
+      {/* 메인 */}
       <ListItemButton onClick={() => navigate('/')}>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
-      </ListItemButton>
-      <ListItemButton onClick={() => navigate('/orders')}>
-        <ListItemIcon>
-          <ShoppingCartIcon />
-        </ListItemIcon>
-        <ListItemText primary="Orders" />
-      </ListItemButton>
-      <ListItemButton onClick={() => navigate('/user')}>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="User" />
+        <ListItemText primary="홈" />
       </ListItemButton>
       <ListItemButton onClick={() => navigate('/mypage')}>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
-        <ListItemText primary="Mypage" />
+        <ListItemText primary="내정보" />
       </ListItemButton>
+      {/* 주문 */}
+      <ListItemButton onClick={() => navigate('/orders')}>
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="주문" />
+      </ListItemButton>
+      {/* 사용자 */}
+      <ListItemButton onClick={() => navigate('/user')}>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="사용자" />
+      </ListItemButton>
+      {/* 내 정보  */}
     </>
   )
 }

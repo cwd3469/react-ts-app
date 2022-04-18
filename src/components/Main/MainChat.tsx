@@ -12,7 +12,7 @@ import { CreateData } from 'typeings/Main'
 import Title from './Title'
 
 // Generate Sales Data
-function createData(time: string, amount?: number): CreateData {
+const createData = (time: string, amount?: number): CreateData => {
   return { time, amount }
 }
 
@@ -28,9 +28,8 @@ const data = [
   createData('24:00', undefined),
 ]
 
-export default function Chart(): JSX.Element {
+function Chart(): JSX.Element {
   const theme = useTheme()
-
   return (
     <>
       <Title>Today</Title>
@@ -77,3 +76,5 @@ export default function Chart(): JSX.Element {
     </>
   )
 }
+
+export default Chart

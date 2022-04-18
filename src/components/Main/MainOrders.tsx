@@ -73,7 +73,7 @@ function preventDefault(event: React.MouseEvent): void {
   event.preventDefault()
 }
 
-export default function Orders(): JSX.Element {
+function Orders(): JSX.Element {
   return (
     <>
       <Title>Recent Orders</Title>
@@ -106,3 +106,4 @@ export default function Orders(): JSX.Element {
     </>
   )
 }
+export default Orders

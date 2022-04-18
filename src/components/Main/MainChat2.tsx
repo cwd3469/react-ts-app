@@ -55,7 +55,7 @@ const data = [
   },
 ]
 
-export default function App(): JSX.Element {
+function Chart2(): JSX.Element {
   return (
     <ComposedChart
       width={600}
@@ -78,3 +78,5 @@ export default function App(): JSX.Element {
     </ComposedChart>
   )
 }
+
+export default Chart2

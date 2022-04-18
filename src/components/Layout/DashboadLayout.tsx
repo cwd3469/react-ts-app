@@ -81,7 +81,7 @@ function DashboardContent(props: DaschboldLayoutprops): JSX.Element {
   const { children } = props
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex' }} minWidth="960px">
         <CssBaseline />
         {/* AppBar는 헤더 */}
         <AppBar position="absolute" open={open}>

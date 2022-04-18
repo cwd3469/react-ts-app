@@ -3,7 +3,7 @@
 // 폼이 정해지면 그때 type 설정 
 import React from 'react'
 
-export default function OrderFromPdf(contents:undefined):any {
+const OrderFromPdf = (contents:undefined):any =>{
   const CalculateForm:any = {
     content:contents,
     styles: {
@@ -27,5 +27,6 @@ export default function OrderFromPdf(contents:undefined):any {
   return CalculateForm
 }
 
+export default OrderFromPdf
 
 

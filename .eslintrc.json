@@ -12,6 +12,7 @@
         "plugin:prettier/recommended",
         "plugin:testing-library/react",
         "plugin:jest-dom/recommended"
+
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -21,7 +22,7 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "react-hooks","testing-library","jest-dom"],
+    "plugins": ["react", "@typescript-eslint", "react-hooks","testing-library","jest-dom" ],
     "rules": {
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
         "react/jsx-props-no-spreading": "off",
@@ -41,7 +42,12 @@
         ],
         "max-len": ["warn", { "code": 80 }],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps":[
+              "warn",
+            {
+              "additionalHooks": "useRecoilCallback"
+            }
+        ] 
     },
     "settings": {
         "import/resolver": {
