@@ -22,6 +22,7 @@ export function MainListItems(): JSX.Element {
         </ListItemIcon>
         <ListItemText primary="홈" />
       </ListItemButton>
+      {/* 내 정보  */}
       <ListItemButton onClick={() => navigate('/mypage')}>
         <ListItemIcon>
           <BarChartIcon />
@@ -42,7 +43,13 @@ export function MainListItems(): JSX.Element {
         </ListItemIcon>
         <ListItemText primary="사용자" />
       </ListItemButton>
-      {/* 내 정보  */}
+      {/* TODO리스트 */}
+      <ListItemButton onClick={() => navigate('/todo')}>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="TODO" />
+      </ListItemButton>
     </>
   )
 }
