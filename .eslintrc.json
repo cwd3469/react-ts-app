@@ -26,6 +26,7 @@
     "rules": {
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
         "react/jsx-props-no-spreading": "off",
+        "@typescript-eslint/explicit-function-return-type": "off ",
         "import/extensions": [
             "error",
             "ignorePackages",
