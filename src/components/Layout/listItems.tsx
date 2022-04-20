@@ -50,6 +50,13 @@ export function MainListItems(): JSX.Element {
         </ListItemIcon>
         <ListItemText primary="TODO" />
       </ListItemButton>
+      {/* TODO리스트 */}
+      <ListItemButton onClick={() => navigate('/todo2')}>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="TODO2" />
+      </ListItemButton>
     </>
   )
 }

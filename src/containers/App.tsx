@@ -1,7 +1,7 @@
 import React from 'react'
 import { RecoilRoot } from 'recoil'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Main, Sign, Orders, User, Mypage, Todo } from '../pages'
+import { Main, Sign, Orders, User, Mypage, Todo, Todo2 } from '../pages'
 
 function App(): JSX.Element {
   return (
@@ -14,6 +14,7 @@ function App(): JSX.Element {
           <Route path="/mypage" element={<Mypage />} />
           <Route path="/sign" element={<Sign />} />
           <Route path="/todo" element={<Todo />} />
+          <Route path="/todo2" element={<Todo2 />} />
         </Routes>
       </BrowserRouter>
     </RecoilRoot>

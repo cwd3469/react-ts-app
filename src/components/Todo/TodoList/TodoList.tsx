@@ -8,6 +8,7 @@ function TodoList(): JSX.Element {
   const [todos, setTodos] = useRecoilState<ITodoTypes[]>(todosState)
 
   const onComplete = useCallback(
+    // 여기서의 id는 템플릿에서  클릭 했을때 넘어 온 id
     (id: number): void => {
       setTodos(
         todos.map((todo: ITodoTypes) => {

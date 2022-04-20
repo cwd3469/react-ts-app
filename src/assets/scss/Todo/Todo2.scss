@@ -1,0 +1,33 @@
+.TodoPage2{
+    background-color: var(--skyBlue);
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+    &-Title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color:var(--white)
+    }
+
+}
+.TodoListBox{
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    &-List{
+        width: 500px;
+        height:500px;
+        background-color: var(--snow);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.TodoItem{
+    background-color: var(--main);
+    border-radius: 5px;
+    padding: 5px;
+    color:var(--white)
+}
