@@ -42,13 +42,7 @@
             }
         ],
         "max-len": ["warn", { "code": 80 }],
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps":[
-              "warn",
-            {
-              "additionalHooks": "useRecoilCallback"
-            }
-        ] 
+        "react-hooks/rules-of-hooks": "error"
     },
     "settings": {
         "import/resolver": {
